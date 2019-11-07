@@ -15,9 +15,10 @@ As soon as this month ends, I'll be moving to next project on my list and come b
 
 An Android application that lets you log your food intake by clicking on a day in a calendar.
 
-## What this app can't do (at this time)
+## What this app can't do (at this time) - Thu Nov 07 2019 2:00 AM
 
-- On selecting a date, a toast is displayed. Display a window with 4 sections (Breakfast, Lunch, Dinner and Snacks arranged vertically) instead
+- On selecting a date, a new activity with 4 sections (Breakfast, Lunch, Dinner and Snacks arranged vertically) is shown.
+    Use the date selected to read corresponding data from local database and fill all those sections
 
 ## Features
 
