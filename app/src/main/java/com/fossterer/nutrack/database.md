@@ -40,3 +40,5 @@ We are going to use Room library for database operations
    1) Reurns DayDao
 3) DAO - DayDao
    1) Methods - Select, Insert, Update, Delete
+
+For Tue Nov 12 2019 - Write TypeAdapter for type 'java.util.Date'
