@@ -22,15 +22,27 @@ An Android application that lets you log your food intake by clicking on a day i
 
 ## Features
 
-### Nov 04 - Nov 08 2019
+### Expected
+
+#### Nov 04 - Nov 08 2019
 
 - Nutrition information for food item is pulled from US Government's FDA database and world.openfoodfacts.org APIs
 - Logged food is retained along with nutrition information
 
-### Nov 11 - Nov 15 2019
+#### Nov 11 - Nov 15 2019
 
 - User can set daily nutrition goals in *Settings* against which daily logged nutrition data acts
 
-### Nov 18 2019
+#### Nov 18 2019
 
 - App is released on to Google Play Store
+
+### Actual
+
+#### Nov 04 - Nov 08 2019
+
+- Deciding between fragments and activities and setting up 2 activities
+- Designing bordered boxes as expected
+- Deciding on database structure to use
+
+#### Nov 11 - Nov 15 2019

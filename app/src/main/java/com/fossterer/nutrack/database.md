@@ -17,7 +17,7 @@ Questions that need mulling over: Friday Nov 08 2019 2:00 AM
 - A meal can have any no. of items -- storing JSON in a column means *not searchable* (eg. How many times in a week certain food has been eaten? etc.)
                                     -- having another 'meals' table leads to multiple entries of same itemNam-quantity pairs but with different unique ids
 
-Is a relational model itself an icorrect choice for this problem?
+Is a relational model itself an incorrect choice for this problem?
 Should 'SharedPreferences' API of Android be used? -- Can you *JOIN* when needed in this case?
 (or) should we use a non-Relational database inside Android?
     - We might look into "Realm" as a potential provider of non-relational databse.
@@ -28,3 +28,15 @@ Should 'SharedPreferences' API of Android be used? -- Can you *JOIN* when needed
     - A user would have to enter in terms of 4 meals a day only
     - A meal entry in a 'day' table would be a JSON structure with unlimited no. of itemName-quantity pairs.
         It is accepted that the meals, once entered are not searchable easily
+
+Date: Mon Nov 11 2019
+=====================
+
+We are going to use Room library for database operations
+
+1) Entity class - Day
+   1) Columns: Date, Meal-1, Meal-2, Meal-3, Meal-4
+2) Database - nuTrack_username
+   1) Reurns DayDao
+3) DAO - DayDao
+   1) Methods - Select, Insert, Update, Delete
