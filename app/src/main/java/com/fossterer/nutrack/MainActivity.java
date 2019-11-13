@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent dayActivityIntent = new Intent(MainActivity.this, DayActivity.class);
                 dayActivityIntent.putExtra(CURRENT_DATE, dayOfMonth);
-                dayActivityIntent.putExtra(CURRENT_MONTH, (month + 1));
+                dayActivityIntent.putExtra(CURRENT_MONTH, (month));
                 dayActivityIntent.putExtra(CURRENT_YEAR, year);
 
                 startActivity(dayActivityIntent);

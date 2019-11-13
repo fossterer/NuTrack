@@ -13,8 +13,14 @@ class JsonTypeConverter {
     }
 
     @TypeConverter
-    public JSONObject toJsonObject(String jsonObject) throws JSONException {
-        return new JSONObject(jsonObject);
+    public JSONObject toJsonObject(String jsonObject){
+        JSONObject jObject = null;
+        try {
+            jObject = new JSONObject(jsonObject);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return jObject;
     }
 
 }

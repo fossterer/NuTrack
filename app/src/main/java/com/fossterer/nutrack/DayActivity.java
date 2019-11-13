@@ -36,10 +36,10 @@ public class DayActivity extends AppCompatActivity {
     }
 
     private void showEntries(int year, int month, int date) {
-        GregorianCalendar day = new GregorianCalendar();
-        day.set(year, month, date);
+        GregorianCalendar gregorianCalendar = new GregorianCalendar();
+        gregorianCalendar.set(year, month, date);
 
-        Log.d(TAG, day.toString());
+        Log.d(TAG, gregorianCalendar.getTime().toString());
     }
 
 }

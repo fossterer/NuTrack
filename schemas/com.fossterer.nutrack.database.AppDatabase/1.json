@@ -1,0 +1,58 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "49ec40c82902a7ef1197f6b800e4398c",
+    "entities": [
+      {
+        "tableName": "Day",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`date` TEXT NOT NULL, `meal1` TEXT, `meal2` TEXT, `meal3` TEXT, `meal4` TEXT, PRIMARY KEY(`date`))",
+        "fields": [
+          {
+            "fieldPath": "date",
+            "columnName": "date",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "meal1",
+            "columnName": "meal1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "meal2",
+            "columnName": "meal2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "meal3",
+            "columnName": "meal3",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "meal4",
+            "columnName": "meal4",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "date"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '49ec40c82902a7ef1197f6b800e4398c')"
+    ]
+  }
+}

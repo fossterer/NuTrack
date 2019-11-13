@@ -4,6 +4,9 @@ import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
+import androidx.room.TypeConverters;
+
+import com.fossterer.nutrack.DateTypeConverter;
 
 import java.util.Date;
 import java.util.List;
@@ -16,7 +19,8 @@ public interface DayDao {
     @Query("SELECT * FROM day")
     List<Day> getAll();
 
-    @Query(("SELECT * FROM day WHERE date = :date"))
+    @Query("SELECT * FROM day WHERE date = :date")
+    @TypeConverters(DateTypeConverter.class)
     Day getDay(Date date);
 
     @Insert
