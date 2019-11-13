@@ -1,11 +1,12 @@
-package com.fossterer.nutrack.database;
+package com.fossterer.nutrack.database.entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
-import com.fossterer.nutrack.DateTypeConverter;
+import com.fossterer.nutrack.database.typeconverter.DateTypeConverter;
+import com.fossterer.nutrack.database.typeconverter.JsonTypeConverter;
 
 import org.json.JSONObject;
 

@@ -42,3 +42,9 @@ We are going to use Room library for database operations
    1) Methods - Select, Insert, Update, Delete
 
 For Tue Nov 12 2019 - Write TypeAdapter for type 'java.util.Date'
+
+Date: Tue Nov 12 2019
+=====================
+
+(1) Eliminate "Date" type everywhere. Convert even the TypeAdapters to refer to GregorianCalendar.
+(2) Add insert button and trigger insert() method. Show it back on read()

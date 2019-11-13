@@ -6,6 +6,9 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 
+import com.fossterer.nutrack.database.dao.DayDao;
+import com.fossterer.nutrack.database.entity.Day;
+
 /**
  * Database holder class for the main database used in this app
  */

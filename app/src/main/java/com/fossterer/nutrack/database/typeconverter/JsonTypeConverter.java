@@ -1,11 +1,11 @@
-package com.fossterer.nutrack.database;
+package com.fossterer.nutrack.database.typeconverter;
 
 import androidx.room.TypeConverter;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-class JsonTypeConverter {
+public class JsonTypeConverter {
 
     @TypeConverter
     public String toString(JSONObject jsonObject) {

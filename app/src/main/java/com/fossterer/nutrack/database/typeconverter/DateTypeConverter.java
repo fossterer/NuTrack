@@ -1,4 +1,4 @@
-package com.fossterer.nutrack;
+package com.fossterer.nutrack.database.typeconverter;
 
 import androidx.room.TypeConverter;
 

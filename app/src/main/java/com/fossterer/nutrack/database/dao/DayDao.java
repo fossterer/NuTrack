@@ -1,4 +1,4 @@
-package com.fossterer.nutrack.database;
+package com.fossterer.nutrack.database.dao;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
@@ -6,7 +6,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.TypeConverters;
 
-import com.fossterer.nutrack.DateTypeConverter;
+import com.fossterer.nutrack.database.typeconverter.DateTypeConverter;
+import com.fossterer.nutrack.database.entity.Day;
 
 import java.util.Date;
 import java.util.List;

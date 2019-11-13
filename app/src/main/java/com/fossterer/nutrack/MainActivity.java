@@ -8,12 +8,11 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.GregorianCalendar;
+
 public class MainActivity extends AppCompatActivity {
 
-    static final String CURRENT_DATE = "com.fossterer.nutrack.MainActivity.CURRENT_DATE";
-    static final String CURRENT_MONTH = "com.fossterer.nutrack.MainActivity.CURRENT_MONTH";
-    static final String CURRENT_YEAR = "com.fossterer.nutrack.MainActivity.CURRENT_YEAR";
-
+    static final String DATE = "com.fossterer.nutrack.MainActivity.CURRENT_DATE";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,13 +23,14 @@ public class MainActivity extends AppCompatActivity {
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
+                GregorianCalendar gregorianCalendar = new GregorianCalendar();
+                gregorianCalendar.set(year, month, dayOfMonth);
+
                 String msg = "Date selected is " + dayOfMonth + "/" + (month + 1) + "/" + year;
                 Toast.makeText(MainActivity.this, msg, Toast.LENGTH_SHORT).show();
 
                 Intent dayActivityIntent = new Intent(MainActivity.this, DayActivity.class);
-                dayActivityIntent.putExtra(CURRENT_DATE, dayOfMonth);
-                dayActivityIntent.putExtra(CURRENT_MONTH, (month));
-                dayActivityIntent.putExtra(CURRENT_YEAR, year);
+                dayActivityIntent.putExtra(DATE, gregorianCalendar);
 
                 startActivity(dayActivityIntent);
             }
