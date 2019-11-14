@@ -10,10 +10,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.fossterer.nutrack.database.AppDatabase;
 import com.fossterer.nutrack.database.entity.Day;
 
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.Locale;
 
 public class DayActivity extends AppCompatActivity {
 
@@ -28,21 +28,16 @@ public class DayActivity extends AppCompatActivity {
 
         Intent passedIntent = getIntent();
         GregorianCalendar gregorianCalendar = (GregorianCalendar) passedIntent.getSerializableExtra(MainActivity.DATE);
-        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("MM/dd/yyyy");
-        // TODO: Avoid concatenation. Use resource string with placeholders
-        String str = (gregorianCalendar.get(Calendar.MONTH) + 1) + "/" + Calendar.DAY_OF_MONTH + "/" + gregorianCalendar.get(Calendar.YEAR);
-        try {
-            date = simpleDateFormat.parse(str);
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        setHeader(date);
-        showEntries(date);
+
+        String dateString = String.format(Locale.getDefault(), "%d/%d/%d", gregorianCalendar.get(Calendar.MONTH) + 1, gregorianCalendar.get(Calendar.DAY_OF_MONTH), gregorianCalendar.get(Calendar.YEAR));
+
+        setHeader(dateString);
+        showEntries(gregorianCalendar.getTime());
     }
 
-    private void setHeader(Date date) {
+    private void setHeader(String str) {
         TextView textView = findViewById(R.id.textView);
-        textView.setText(date.toString());
+        textView.setText(str);
     }
 
     private void showEntries(Date date) {

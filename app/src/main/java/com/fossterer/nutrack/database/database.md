@@ -48,3 +48,10 @@ Date: Tue Nov 12 2019
 
 (1) Eliminate "Date" type everywhere. Convert even the TypeAdapters to refer to GregorianCalendar.
 (2) Add insert button and trigger insert() method. Show it back on read()
+
+Date: Wed Nov 13 2019
+=====================
+
+(1) The "Date" isn't doing it (with its time component that messes data fetching). Just store as String and get rid of DateTypeAdapter
+(2) "Observe" the "LiveData" ! For insertions/updations, use setValue() (or postValue())
+(2) Add insert button and trigger insert() method. Show it back on read()
