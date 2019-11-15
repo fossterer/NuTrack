@@ -1,4 +1,4 @@
-# NuTrack - Nutrition Tracker
+# NuTrack - Nutrition Tracker ![Build Status](https://github.com/fossterer/NuTrack/workflows/Android%20CI/badge.svg?branch=master)
 ![An assortment of various foods](app/src/main/assets/images/nutrition.jpg)
 ## General goals
 
