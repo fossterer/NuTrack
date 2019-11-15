@@ -1,5 +1,5 @@
 # NuTrack - Nutrition Tracker
-![An assortment of various foods](app/src/main/res/images/nutrition.jpg)
+![An assortment of various foods](app/src/main/assets/images/nutrition.jpg)
 ## General goals
 
 Today is Nov 04 2019. I'm jumping into this [1 PPM (1 Project Per Month) challenge](https://blog.1ppm.club/). The goal is to just get things done. I will be pushing projects to Github, deploying them at random sub-domains under my own domain (or under a /projects link), 1 per month.
