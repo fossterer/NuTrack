@@ -6,8 +6,8 @@ import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.TypeConverters;
 
-import com.fossterer.nutrack.database.typeconverter.DateTypeConverter;
 import com.fossterer.nutrack.database.entity.Day;
+import com.fossterer.nutrack.database.typeconverters.DateTypeConverter;
 
 import java.util.Date;
 import java.util.List;

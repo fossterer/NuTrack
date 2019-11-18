@@ -5,8 +5,8 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
-import com.fossterer.nutrack.database.typeconverter.DateTypeConverter;
-import com.fossterer.nutrack.database.typeconverter.JsonTypeConverter;
+import com.fossterer.nutrack.database.typeconverters.DateTypeConverter;
+import com.fossterer.nutrack.database.typeconverters.JsonTypeConverter;
 
 import org.json.JSONObject;
 

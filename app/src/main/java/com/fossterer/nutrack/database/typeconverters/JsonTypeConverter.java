@@ -1,4 +1,4 @@
-package com.fossterer.nutrack.database.typeconverter;
+package com.fossterer.nutrack.database.typeconverters;
 
 import androidx.room.TypeConverter;
 
@@ -13,7 +13,7 @@ public class JsonTypeConverter {
     }
 
     @TypeConverter
-    public JSONObject toJsonObject(String jsonObject){
+    public JSONObject toJsonObject(String jsonObject) {
         JSONObject jObject = null;
         try {
             jObject = new JSONObject(jsonObject);

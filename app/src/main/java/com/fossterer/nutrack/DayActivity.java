@@ -6,9 +6,9 @@ import android.util.Log;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
 
-import com.fossterer.nutrack.database.AppDatabase;
-import com.fossterer.nutrack.database.entity.Day;
+import com.fossterer.nutrack.viewmodels.DayViewModel;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -40,15 +40,24 @@ public class DayActivity extends AppCompatActivity {
         textView.setText(str);
     }
 
+    /**
+     * Fills UI elements with values read from database
+     * <p>
+     * Subscribes to DayViewModel for database operations
+     *
+     * @param date Date at which information is to be retrieved (eg. 07/23/2019)
+     */
     private void showEntries(Date date) {
         Log.d(TAG, date.toString());
         // Get reference to meal_1 resource
         TextView meal1_view = findViewById(R.id.meal1_item1);
         // Get meal_1 JSON from database for row with date from gregorianCalendar
         try {
-            Day day = AppDatabase.getInstance(this.getApplicationContext()).dayDao().getDay(date);
+            DayViewModel dayViewModel = ViewModelProviders.of(this).get(DayViewModel.class);
+            dayViewModel.getDay(date).observe(this, day -> {
+                meal1_view.setText(day.getMeal1().toString());
+            });
             // setText for the meal_1 resource
-            meal1_view.setText(day.getMeal1().toString());
         } catch (Exception e) {
             e.printStackTrace();
         }

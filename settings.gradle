@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='NuTrack'
+rootProject.name = 'NuTrack'
