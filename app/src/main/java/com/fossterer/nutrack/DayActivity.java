@@ -54,8 +54,10 @@ public class DayActivity extends AppCompatActivity {
         // Get meal_1 JSON from database for row with date from gregorianCalendar
         try {
             DayViewModel dayViewModel = ViewModelProviders.of(this).get(DayViewModel.class);
-            dayViewModel.getDay(date).observe(this, day -> {
-                meal1_view.setText(day.getMeal1().toString());
+            dayViewModel.getDay(this.getApplicationContext(), date).observe(this, day -> {
+                if (day != null) {
+                    meal1_view.setText(day.getMeal1().toString());
+                }
             });
             // setText for the meal_1 resource
         } catch (Exception e) {

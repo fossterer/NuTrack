@@ -1,5 +1,6 @@
 package com.fossterer.nutrack.database.dao;
 
+import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
@@ -22,7 +23,7 @@ public interface DayDao {
 
     @Query("SELECT * FROM day WHERE date = :date")
     @TypeConverters(DateTypeConverter.class)
-    Day getDay(Date date);
+    LiveData<Day> getDay(Date date);
 
     @Insert
     void insertAll(Day... days);
